@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.header{
+    color: white;
+    background-color: #8B9E70;
+    margin: 40px;
+    padding-top: 40px;
+    height: 690px;
+}
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Exemple */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+nav > ul li:hover .sous{
+    display: block;
+}
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+/*
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.lien{
+    display: ;
+    position: sticky;
+}
+
+.deroulant{
+    display: flex;
+    align-items: center;
+}
+
+.deroulant{
+    list-style: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.deroulant a{
+    display: block;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0;
+}
+
+.lien a:hover{
+    color: teal;
+}
+
+.lien-btn{
+    display: none;
+    box-shadow: 0 1px 2px #CCC;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .lien-btn{
+    display: block;
+}
+
+.lien-btn li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.lien-btn a{
+    padding: 10px;
+    border-bottom: none;
+}
+
+.lien-btn a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+
+.deroulant > a::after{
+    content: "";
+}
+
+.login{
+    background-color: #2E3113;
+    border-radius: 50px;
+    padding: 5px 20px 5px 20px;
+}*/
+
+.header-part{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.header-title{
+    width: 500px;
+}
+
+.header-title h1{
+    font-size: 75px;
+}
+
+.header-title p{
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.btn{
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px 10px 25px;
+    margin-right: 10px;
+}
+
+.btn-1{
+    background-color: #2E3113;
+}
+
+.btn-2{
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.fond{
+    width: 900px;
+    height: 700px;
+    object-fit: cover;
+}
+
+.section1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.sect-part1{
+    width: 150px;
+}
+
+.sect-part1 h2{
+    font-weight: bold;
+}
+
+.sect-part1 p{
+    color: #B5B5B5;
+    font-size: 11px;
+    margin-top: 40px;
+}
+
+.sect-part2{
+    background-color: #F5F5F5;
+}
+
+.img{
+    width: 400px;
+    height: 300px;
+}
+
+@media(min-width: 320px) and (max-width: 1500px){
+    .header{
+        width: 100%;
+        padding: 0;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+
+    .header-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title h1{
+        font-size: 20px;
+    }
+
+    .header-title p{
+        font-size: 10px;
+    }
+
+    .fond{
+        width: 300px;
+    
+    }
+
+    .section1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .sect{
+        align-items: center;
+    }
+}
